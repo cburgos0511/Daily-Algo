@@ -1,0 +1,16 @@
+const insertionSort = arr => {
+  for (let i = 1; i < arr.length; i++) {
+    let valToInsert = arr[i];
+    let holePosition = i;
+
+    while (holePosition > 0 && arr[holePosition - 1] > valToInsert) {
+      arr[holePosition] = arr[holePosition - 1];
+      holePosition--;
+    }
+
+    arr[holePosition] = valToInsert;
+  }
+  return arr;
+};
+
+console.log(insertionSort([85, 23, 12, 65, 4, 3, 65, 4, 1]));
