@@ -8,7 +8,7 @@
 
 // Some easy examples:
 
-// Input: "abc" and "cde"      => Output: "abCCde"
+// Input: "abc" and "cde"      => Output: "abCCde" 
 // Input: "ab" and "aba"        => Output: "aBABA"
 // Input: "abab" and "bababa"  => Output: "ABABbababa"
 // Once again for the last example - description of "KenKamau", see discourse;-):
@@ -19,58 +19,69 @@
 
 // c) merge new strings 'a' and 'b' return "ABABbababa"
 
+
 const combineTwoStrings = (str1, str2) => {
-   let mk1 = makeSet(str1);
-   let mk2 = makeSet(str2);
-   str1 = str1.split("");
-   str2 = str2.split("");
+    let mk1 = makeSet(str1) 
+    let mk2 = makeSet(str2)
+    str1 = str1.split('')
+    str2 = str2.split('')
+ 
 
-   let done = 0;
-   mk2;
-   while (done <= Object.keys(mk2).length) {
-      console.log(done);
+    let done = 0
+    mk2
+    while(done <= Object.keys(mk2).length) { 
+        console.log(done);
+           
+        console.log(Object.keys(mk2)[done]);
 
-      console.log(Object.keys(mk2)[done]);
+        console.log(mk2[Object.keys(mk2)[done]]);
 
-      console.log(mk2[Object.keys(mk2)[done]]);
-
-      if (mk2[Object.keys(mk2)[done]] % 2 !== 0) {
-         for (let i = 0; i < str1.length; i++) {
-            if (str1[i] === Object.keys(mk2)[done]) {
-               str1[i] = str1[i].toUpperCase();
+        if(mk2[Object.keys(mk2)[done]] % 2 !== 0){            
+            for(let i = 0; i < str1.length; i++) {
+                if(str1[i] === Object.keys(mk2)[done]) {
+                    
+                   str1[i] = str1[i].toUpperCase()
+                } 
             }
-         }
-      }
+        }
 
-      done++;
-   }
-   str1;
+        done++
+    }
+    str1
 
-   done = 0;
+    done = 0
 
-   while (done < Object.keys(mk1).length) {
-      console.log(mk1[Object.keys(mk1)[done]]);
+    while(done < Object.keys(mk1).length){
+        console.log(mk1[Object.keys(mk1)[done]]);
 
-      if (mk1[Object.keys(mk1)[done]] % 2 !== 0) {
-         for (let i = 0; i < str2.length; i++) {
-            if (str2[i] === Object.keys(mk1)[done]) {
-               str2[i] = str2[i].toUpperCase();
+        if(mk1[Object.keys(mk1)[done]] % 2 !== 0){
+            for(let i = 0; i < str2.length; i++) {
+                if(str2[i] === Object.keys(mk1)[done]) {
+                    
+                   str2[i] = str2[i].toUpperCase()
+                   
+                } 
             }
-         }
-      }
-      done++;
-   }
+        } 
+        done++
+        
+    }
+    
 
-   return str1.join("") + str2.join("");
-};
+    return str1.join('') + str2.join('')
+}
+
+
 
 const makeSet = (str) => {
-   let hash = {};
-   for (let val of str) {
-      hash[val] = hash[val] + 1 || 1;
-   }
+    let hash = {};
+    for (let val of str) {
+      hash[val] = hash[val] + 1 || 1; 
+    }
 
-   return hash;
-};
+    return hash
+}
 
-console.log(combineTwoStrings("abc", "cde"));
+
+
+console.log(combineTwoStrings('abc', 'cde'));
