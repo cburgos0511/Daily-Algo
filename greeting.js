@@ -10,4 +10,3 @@ const sayHello = (name) => {
    return `Hello ${n}!`;
 };
 
-console.log(sayHello("cRuZ"));
