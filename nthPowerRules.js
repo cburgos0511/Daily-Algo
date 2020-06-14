@@ -1,0 +1,1 @@
+const  modifiedSum = (a, n) => a.reduce((s, c) => s + Math.pow(c, n) - c, 0)
