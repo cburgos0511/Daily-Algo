@@ -33,5 +33,3 @@ const digPow = (n, p) => {
 
   return sum % n === 0 ? sum / n : -1;
 };
-
-console.log(digPow(46288, 3));
