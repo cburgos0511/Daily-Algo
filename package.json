@@ -1,0 +1,22 @@
+{
+  "name": "daily-algo",
+  "version": "1.0.0",
+  "description": "Daily Data Structure and Algorithm from popular sites.\r Most of the challeges are from Codewars.",
+  "main": "IQtest.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cburgos0511/Daily-Algo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cburgos0511/Daily-Algo/issues"
+  },
+  "homepage": "https://github.com/cburgos0511/Daily-Algo#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}

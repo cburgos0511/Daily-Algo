@@ -6,3 +6,5 @@ function getSumOfDigits(integer) {
    }
    return sum;
 }
+
+module.exports = getSumOfDigits;
